@@ -1,8 +1,11 @@
 package net.javaguides.springboot;
 
+import net.javaguides.springboot.model.Employee;
 import net.javaguides.springboot.repository.BranchRepository;
 import net.javaguides.springboot.repository.EmployeeRepository;
 import net.javaguides.springboot.service.BranchService;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -28,6 +31,14 @@ public class SpringbootBackendApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		
+		 List<Employee> employees = employeeRepository.findAll();
+
+		    // Print the names of all employees
+		    System.out.println("All Employee Names:");
+		    for (Employee employee : employees) {
+		        System.out.println(employee.getFirstName());
+		    }
 //		
 //		 Employee emp = new Employee();
 //		 emp.setId(1);

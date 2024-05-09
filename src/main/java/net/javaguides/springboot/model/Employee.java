@@ -9,12 +9,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
 import jakarta.persistence.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
+@JsonIgnoreType
 @Table(name = "employees")
 public class Employee {
 

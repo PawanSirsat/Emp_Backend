@@ -2,6 +2,8 @@ package net.javaguides.springboot.model;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreType;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,6 +20,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Entity
+@JsonIgnoreType
 @Table(name = "branch")
 public class Branch implements Serializable {
 
@@ -59,6 +62,10 @@ public class Branch implements Serializable {
 
 	public void setBranchName(String branchName) {
 		this.branchName = branchName;
+	}
+
+	public Branch() {
+		// TODO Auto-generated constructor stub
 	}
     
     

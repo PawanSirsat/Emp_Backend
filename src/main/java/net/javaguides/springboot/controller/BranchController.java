@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://emp-frontend-black.vercel.app")
 @RestController
 @RequestMapping("/api/v1/branches")
 public class BranchController {
